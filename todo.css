@@ -1,0 +1,133 @@
+body
+{
+    background-color: whitesmoke;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+#mainheading
+{
+    width: 170px;
+    text-align: center;
+    margin: auto;
+}
+#addcontentimg
+{
+    width: 231px;
+    margin: 10px;
+    border-radius: 10px;
+}
+#addcontentimg:hover
+{
+    cursor: pointer;
+}
+.listbox0
+{
+    display: grid;
+    grid-template-columns: 1210px 690px;
+}
+#listbox
+{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px;
+}
+.listtitle
+{
+    border: none;
+    width: 190px;
+    border-radius: 6px;
+}
+.listDescription
+{
+    border: none;
+    resize: none;
+    width: 190px;
+    border-radius: 6px;
+}
+.card
+{
+    margin: 10px;
+    width: 271px;
+    height: 250px;
+}
+#analysis
+{
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px;
+}
+.progress
+{
+    margin: 40px 60px 35px 73px;
+    height: 100px;
+}
+.analysisHeading
+{
+    display: grid;
+    grid-template-columns: 539px 65px;
+    margin: 15px 0px 0px 36px;
+}
+.analysisHeading h2
+{
+    padding: 0px 0px 0px 0px;
+    width: 135px;
+    margin: auto;
+}
+.analysisHeading button
+{
+    height: 36px;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    padding:0px 10px 0px 10px;
+}
+.name
+{
+    display: flex;
+    margin: 0px 40px 0px 0px;
+}
+.n
+{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background-color: green;
+}
+.name p
+{
+    margin: 0px;
+    padding:  0px 0px 0px 6px;
+    height: 15px;
+    font-size: 10px;
+}
+.naming
+{
+    margin-left: 110px;
+    margin-top: 60px;
+    display: flex;
+}
+.progresscount
+{
+    margin: 75px 25px 0px 25px;
+    display: flex;
+}
+.cardcount
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 270px;
+}
+#removedcount,#totalcount,#completedcount
+{
+    font-size: 100px;
+    opacity: .5;
+}
+.countname
+{
+    width: 90px;
+    text-align: center;
+    opacity: .4;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDolist</title>
+
+  <!-- css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="todo.css">
+
+  <!-- css end -->
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,500&family=Montserrat+Alternates&family=Pixelify+Sans&family=Poiret+One&display=swap" rel="stylesheet">
+<!-- font end -->
+</head>
+
+<body>
+
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">aSc</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" onclick="window.scrollTo(0,0)">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="window.scrollTo(0,document.body.scrollHeight)">End</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            more
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" onclick="location.reload()">Refresh</a></li>
+            <li><a class="dropdown-item" href="https://github.com/ChandelAnish" target="_blank">Github</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank">linkedIn</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- nav bar -->
+
+
+  <!-- main heading -->
+  <div class="container0">
+    <h1 id="mainheading">MY List</h1>
+    <!-- list cards -->
+    <div class="listbox0">
+      <div id="listbox">
+        <img id="addcontentimg" src="assets/add content.png" alt="add content" onclick="addlist()">
+        <!-- cards will be inserted here -->
+      </div>
+      <div id="analysis">
+        <div class="analysisHeading">
+          <h2>Progress</h2>
+          <button type="button" class="btn btn-danger" onclick="resetAll()">Reset</button>
+        </div>
+
+        <!-- progress chart -->
+        <div class="progressbar">
+
+          <!-- 1st bar -->
+          <div id="bar1" class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-success" style="width: 0%">0%</div>
+          </div>
+          <!-- 2nd bar -->
+          <div id="bar2" class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-info text-dark" style="width: 0%">0%</div>
+          </div>
+          <!-- 3rd bar -->
+          <div id="bar3" class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-warning text-dark" style="width: 0%">0%</div>
+          </div>
+          <!-- 4th bar -->
+          <div id="bar4" class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-danger" style="width: 0%">0%</div>
+          </div>
+          <!-- naming bars -->
+          <div class="naming">
+            <div class="name">
+              <div class="n"></div>
+              <p>completed task</p>
+            </div>
+            <div class="name">
+              <div class="n" style="background-color: aqua;"></div>
+              <p>total task</p>
+            </div>
+            <div class="name">
+              <div class="n" style="background-color: darkorange;"></div>
+              <p>removed task</p>
+            </div>
+            <div class="name">
+              <div class="n" style="background-color: red;"></div>
+              <p>efficiency</p>
+            </div>
+          </div>
+          <!-- naming bars end-->
+
+          <!-- progress count -->
+          
+          <div class="progresscount">
+
+            <div id="completed" class="card cardcount">
+              <div class="card-body cardcount" style="width: auto; height: auto;">
+                <p class="card-text" id="completedcount">0</p>
+              </div>
+              <p class="countname">completed</p>
+            </div>
+
+            <div id="total" class="card cardcount">
+              <div class="card-body cardcount" style="width: auto; height: auto;">
+                <p class="card-text" id="totalcount">0</p>
+              </div>
+              <p class="countname">total task</p>
+            </div>
+
+            <div id="removed" class="card cardcount">
+              <div class="card-body cardcount" style="width: auto; height: auto;">
+                <p class="card-text" id="removedcount">0</p>
+              </div>
+              <p class="countname">removed</p>
+            </div>
+            
+          </div>
+        </div>
+        <!-- progress count end-->
+
+
+        <!-- progress chart end -->
+      </div>
+    </div>
+  </div>
+  <!-- script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="todo.js"></script>
+</body>
+
+</html>
